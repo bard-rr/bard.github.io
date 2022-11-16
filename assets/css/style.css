@@ -997,7 +997,7 @@ section {
 }
 
 #toc li {
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   line-height: 1.25rem;
 }
 
@@ -1007,11 +1007,11 @@ section {
 }
 
 #toc a:hover {
-  color: var(--fjord-blue);
+  color: #34384c;
 }
 
 #toc .selected a {
-  color: var(--fjord-blue);
+  color: #7398ff;
   text-decoration: none;
 }
 
@@ -1019,6 +1019,7 @@ section {
   font-size: 0.875rem;
   font-weight: 500;
   margin-left: 0.75rem;
+  margin-top: 1rem;
 }
 
 #toc a > div {
@@ -1037,26 +1038,26 @@ section {
 }
 
 #toc .bullet div {
-  background-color: var(--gray-300);
+  background-color: #aaaaaa;
   border-radius: 50%;
   height: 0.5rem;
   width: 0.5rem;
 }
 
 #toc a:hover .bullet div {
-  background-color: var(--gray-400);
+  background-color: #8f8f8f;
 }
 
 #toc .selected a:hover .bullet div {
-  background-color: var(--fjord-blue);
+  background-color: #34384c;
 }
 
 #toc .selected .bullet {
-  background-color: var(--fjord-light-blue);
+  background-color: #7398ff;
 }
 
 #toc .selected .bullet div {
-  background-color: var(--fjord-blue);
+  background-color: #34384c;
 }
 
 #toc .subitem {
@@ -1066,6 +1067,10 @@ section {
 
 #toc .subitem.show {
   display: block;
+}
+
+#toc ul {
+  list-style: none;
 }
 
 /* Case study styles */
@@ -1091,7 +1096,7 @@ section {
 }
 #case-study-content > div {
   margin-left: var(--toc-width);
-  padding: 4rem;
+  padding: 4rem 1rem;
 }
 #case-study-content .prose h1::before,
 #case-study-content .prose h2::before,
