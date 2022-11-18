@@ -1098,6 +1098,11 @@ section {
   margin-left: var(--toc-width);
   padding: 4rem 1rem;
 }
+
+#case-study-content .prose {
+  max-width: 80ch;
+}
+
 #case-study-content .prose h1::before,
 #case-study-content .prose h2::before,
 #case-study-content .prose h3::before,
@@ -1168,12 +1173,10 @@ section {
   text-align: center;
 }
 
-.video-container {
-  text-align: center;
-}
+/* .video-container {
+} */
 
 .video {
   border-radius: 10px;
-  width: 800px;
-  max-width: 200px;
+  width: 100%;
 }
