@@ -254,6 +254,14 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  #toc {
+    display: none;
+  }
+
+  #case-study-content > div {
+    margin-left: 0 !important;
+  }
 }
 
 .navbar-mobile {
