@@ -1167,3 +1167,13 @@ section {
   color: #334252;
   text-align: center;
 }
+
+.video-container {
+  text-align: center;
+}
+
+.video {
+  border-radius: 10px;
+  width: 800px;
+  max-width: 200px;
+}
