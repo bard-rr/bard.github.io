@@ -1181,8 +1181,10 @@ section {
   text-align: center;
 }
 
-/* .video-container {
-} */
+.video-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 .video {
   border-radius: 10px;
