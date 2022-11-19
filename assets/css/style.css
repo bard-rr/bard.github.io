@@ -254,6 +254,14 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  #toc {
+    display: none;
+  }
+
+  #case-study-content > div {
+    margin-left: 0 !important;
+  }
 }
 
 .navbar-mobile {
@@ -1098,6 +1106,11 @@ section {
   margin-left: var(--toc-width);
   padding: 4rem 1rem;
 }
+
+#case-study-content .prose {
+  max-width: 80ch;
+}
+
 #case-study-content .prose h1::before,
 #case-study-content .prose h2::before,
 #case-study-content .prose h3::before,
@@ -1166,4 +1179,14 @@ section {
 .prose figure figcaption {
   color: #334252;
   text-align: center;
+}
+
+.video-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.video {
+  border-radius: 10px;
+  width: 100%;
 }
