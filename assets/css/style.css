@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --toc-width: 400px;
+  --bard-blue: #7398ff;
+}
 a:hover {
   color: #34384c;
   text-decoration: none;
@@ -30,11 +34,6 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-}
-
-:root {
-  --toc-width: 400px;
-  --bard-blue: #7398ff;
 }
 
 /*--------------------------------------------------------------
@@ -954,6 +953,14 @@ section {
   color: #4a5568; /* sophie changes */
 }
 
+.prose figure figcaption {
+  color: #4a5568;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .prose a:hover {
   text-decoration-color: #d2dcee !important;
 }
@@ -985,11 +992,6 @@ section {
 .prose code:before,
 .prose code:after {
   content: "";
-}
-
-.prose figure figcaption {
-  color: #334252;
-  text-align: center;
 }
 
 .video-container {

@@ -5,8 +5,8 @@
   [x] ensure new sections make it into TOC
   [x] add links when needed
   [x] put in Gene's diagrams + video content
-  [] handle captions for diagrams and video content when needed
-  [] make the links stand out more than they do
+  [x] handle captions for diagrams and video content when needed
+  [x] make the links stand out more than they do
   [] fix the 'what we offer' section
   [] fix the team section
   [] populate the 'references' section
@@ -422,16 +422,24 @@
           <p>
             There are many possible solutions that help developers investigate low user conversion rates. One of these is collecting and analyzing application metrics. These metrics can include site traffic, top-viewed pages, and even the rate of conversion. Metrics are excellent tools for gathering high-level information about a website`s performance, but they lack meaningful information about individual user interactions; at best, they only offer a percentage of successful conversions. This is useful as a general health check, but it doesn`t give detailed information on a user`s interaction with the application. For example, metrics could tell you that your website has fast load times for all of your users, but they couldn`t tell you if 90% of your users don`t purchase your products because they can`t find the checkout button.
           </p>
-          <!-- TODO: needs caption -->
           <div class="image-container">
-            <img src="assets/png/Web Analytics.png">
+            <figure>
+              <img src="assets/png/Web Analytics.png">
+              <figcaption>
+                A hypothetical dashboard displaying metrics for an app called Better Brew.
+              </figcaption>
+            </figure>
           </div>
           <p>
             A solution that gives us more insight into individual user behavior is an application heat map. This is a visual that represents how often users click on each element on a website`s User Interface. It's a great tool to gain insight into where the user`s attention is, but it doesn`t show the full context of why users are, or are not, following the intended conversion path. For example, a heat map could tell a developer if app users aren`t clicking a button they should be clicking. But if the core problem is that a page takes too long to load and most app users quit before they can click anything, then the heat map won`t identify that issue. 
           </p>
-          <!-- TODO: needs caption -->
           <div class="image-container">
-            <img src="assets/png/Heat Map.png">
+            <figure>
+              <img src="assets/png/Heat Map.png">
+              <figcaption>
+                An example of a heat map for a shop application. Red areas are clicked on more frequently.
+              </figcaption>
+            </figure>
           </div>
           <p>
             Metrics and heat maps both provide imperfect solutions to the problem of low user conversion; metrics provide high-level quantitative information, while heat maps provide low-level, qualitative information. While combining heat maps and metrics may be a fair solution, it comes with the overhead of managing two different kinds of tools. Furthermore, heat maps may not provide the best form of qualitative information available; what if we`re interested in user actions other than clicks? What would be more powerful is the ability to watch a user as they interact with the application and investigate where and why users are leaving the conversion path. That`s where session replay tools come into play.
@@ -634,9 +642,13 @@
           <p>
             The DOM is a representation of a web page as a software object. Developers can write javascript code that detects user actions and changes the DOM in response. This is how developers are able to create dynamic, interactive websites. The DOM also has a hierarchical tree-like structure. Each node in the tree is a piece of a web page. Adding nodes to the DOM adds pieces to the web page; removing nodes from the DOM takes them away.
           </p>
-          <!-- TODO: caption needed -->
           <div class="image-container">
-            <img src="assets/png/DOM.png">
+            <figure>
+              <img src="assets/png/DOM.png">
+              <figcaption>
+                An illustration of a basic DOM tree. The DOM on the left corresponds to the html on the right.
+              </figcaption>
+            </figure>
           </div>
           <p>
             Each of the three session recording tools mentioned above works by tracking the DOM`s structure. The recording engine takes a full snapshot of the DOM tree when the page first loads, and notes DOM changes that occur as a result of user interactions. The engine also records the time of each snapshot and change. When it comes time to replay a user`s session, each tool`s replaying engine uses the recorded DOM snapshots to rebuild the DOM seen by the user. These tools also use the recorded DOM changes to modify the rebuilt DOM in the same way and in the same order that the user experienced. 
