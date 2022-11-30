@@ -441,11 +441,10 @@ h6 {
   #hero .carousel-control-next {
     width: 5%;
   }
-  
+
   #case-study-content .prose {
     margin-left: var(--toc-width);
   }
-  
 }
 
 @media (max-width: 768px) {
@@ -1205,4 +1204,9 @@ section {
 .video {
   border-radius: 10px;
   width: 100%;
+}
+
+.image-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

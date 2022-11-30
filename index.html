@@ -4,11 +4,12 @@
   [x] update all text
   [x] ensure new sections make it into TOC
   [x] add links when needed
-  [] populate the 'references' section
-  [] put in Gene's diagrams + video content
+  [x] put in Gene's diagrams + video content
   [] handle captions for diagrams and video content when needed
+  [] make the links stand out more than they do
   [] fix the 'what we offer' section
   [] fix the team section
+  [] populate the 'references' section
   [] better mobile support
   [] fix the TOC animation so it doesn't highlight all pieces in between the one you're on and the one you click on -->
 <head>
@@ -421,20 +422,16 @@
           <p>
             There are many possible solutions that help developers investigate low user conversion rates. One of these is collecting and analyzing application metrics. These metrics can include site traffic, top-viewed pages, and even the rate of conversion. Metrics are excellent tools for gathering high-level information about a website`s performance, but they lack meaningful information about individual user interactions; at best, they only offer a percentage of successful conversions. This is useful as a general health check, but it doesn`t give detailed information on a user`s interaction with the application. For example, metrics could tell you that your website has fast load times for all of your users, but they couldn`t tell you if 90% of your users don`t purchase your products because they can`t find the checkout button.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <!-- TODO: needs caption -->
+          <div class="image-container">
+            <img src="assets/png/Web Analytics.png">
           </div>
           <p>
             A solution that gives us more insight into individual user behavior is an application heat map. This is a visual that represents how often users click on each element on a website`s User Interface. It's a great tool to gain insight into where the user`s attention is, but it doesn`t show the full context of why users are, or are not, following the intended conversion path. For example, a heat map could tell a developer if app users aren`t clicking a button they should be clicking. But if the core problem is that a page takes too long to load and most app users quit before they can click anything, then the heat map won`t identify that issue. 
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <!-- TODO: needs caption -->
+          <div class="image-container">
+            <img src="assets/png/Heat Map.png">
           </div>
           <p>
             Metrics and heat maps both provide imperfect solutions to the problem of low user conversion; metrics provide high-level quantitative information, while heat maps provide low-level, qualitative information. While combining heat maps and metrics may be a fair solution, it comes with the overhead of managing two different kinds of tools. Furthermore, heat maps may not provide the best form of qualitative information available; what if we`re interested in user actions other than clicks? What would be more powerful is the ability to watch a user as they interact with the application and investigate where and why users are leaving the conversion path. That`s where session replay tools come into play.
@@ -459,11 +456,8 @@
           <p>
             There are many session replay tools on the market today, so developers have plenty of choices.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/Exisiting Solutions.png">
           </div>
           <p>
             One option is to create a DIY solution by using an open-source tool like <a href="https://www.rrweb.io/">rrewb</a>. rrweb is a great way to record sessions and replay them, but it's nothing more than a simple recording and replaying engine. It doesn`t come with a backend, so a developer will need to create a data pipeline and storage solution to build any sort of session replay tool. They`d also need to create a UI that would allow them to use the data they`ve collected. This type of solution could take a lot of time and resources that developers of small online applications may not have.
@@ -486,7 +480,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/user_interface/Session Selection  Replay Loop.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -495,11 +489,8 @@
           <p>
             In addition to viewing user sessions, Bard users can perform conversion analysis on recorded sessions using a tool called a funnel. Funnels compare user interactions with a series of predefined steps that define a conversion. They also show how many users completed or failed each step, providing an easy way of identifying pain points in a conversion path. The below figure outlines a hypothetical funnel for a conversion path consisting of a user visiting a site, adding an item to their cart, checking out, and completing their order. 500 sessions enter the funnel, but only 100 of them ultimately convert by following each step and completing an order.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/funnel.png">
           </div>
           <p>
             The funnel results give a quick overview of what the trickiest parts of a conversion path are. Bard also allows users to replay the sessions in each step of the funnel, giving context on why users are having trouble. The data from funnel analysis and the qualitative context of session replay enable a developer to make informed improvements to their application.
@@ -510,7 +501,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/user_interface/Create Funnel.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -523,7 +514,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/user_interface/View Funnel.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -538,7 +529,7 @@
           <h2 id="section-3" class="h2">3. Architecture</h2>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/whole system data flow.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -549,7 +540,7 @@
           <h3 id="section-3-2">Collection</h3>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/collection data flow.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -557,16 +548,13 @@
           <p>
             The Agent is an npm package named <a href="https://www.npmjs.com/package/bardrr?activeTab=dependencies">bardrr</a>, for “bard record and replay”, that's responsible for collecting session data from web applications. Applications with our Agent are called instrumented applications; they use the Agent to record user sessions and send the data to the Bard backend. The Agent uses rrweb as its recording engine, and also sends additional metadata required for conversion analysis. rrweb works by translating each user action into a piece of data that we call an event. An example of an event for a user clicking their mouse is below.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/event_json.png">
           </div>
           <h3 id="section-3-3">Data Processing & Storage</h3>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/data processing flow.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -580,11 +568,8 @@
           <p>
             The Agent API also parses session metadata (length, application name, etc.) from the Agent`s incoming event data. This data is then used to create or update session metadata in our PostgreSQL database, which stores active sessions. An example of the session metadata created by the Agent API is below.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/session_json.png">
           </div>
           <p>
             The last role of the Agent API is the collecting and forwarding of all of rrweb`s event data. Only a small subset of events from the Agent are used in conversion analysis, but the rest are needed to replay user sessions. This data comes in at a high rate, so the Agent API passes it to our RabbitMQ message queue for processing. 
@@ -604,7 +589,7 @@
           <h4 id="section-3-3-5">Session Ender</h4>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/session ender data flow.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -614,7 +599,7 @@
           <h3 id="section-3-4">Analyze & Replay</h3>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/replay data flow.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -629,11 +614,8 @@
           <p>
             The Replayer UI displays session data and session replays in an intuitive way. Bard users can filter and sort sessions based on the app name, date, length, and errors. The UI also allows Bard users to define conversion funnels based on clicks and custom events. These funnels can be used to perform conversion analysis on large groups of sessions.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/Session List.png">
           </div>
           <h3 id="section-3-5">Analyze & Replay</h3>
           <p>
@@ -652,11 +634,9 @@
           <p>
             The DOM is a representation of a web page as a software object. Developers can write javascript code that detects user actions and changes the DOM in response. This is how developers are able to create dynamic, interactive websites. The DOM also has a hierarchical tree-like structure. Each node in the tree is a piece of a web page. Adding nodes to the DOM adds pieces to the web page; removing nodes from the DOM takes them away.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <!-- TODO: caption needed -->
+          <div class="image-container">
+            <img src="assets/png/DOM.png">
           </div>
           <p>
             Each of the three session recording tools mentioned above works by tracking the DOM`s structure. The recording engine takes a full snapshot of the DOM tree when the page first loads, and notes DOM changes that occur as a result of user interactions. The engine also records the time of each snapshot and change. When it comes time to replay a user`s session, each tool`s replaying engine uses the recorded DOM snapshots to rebuild the DOM seen by the user. These tools also use the recorded DOM changes to modify the rebuilt DOM in the same way and in the same order that the user experienced. 
@@ -672,9 +652,8 @@
           </p>
           <h3 id="section-4-2">Data Ingestion</h3>
           <p>
-            The second significant challenge that informed our design was data ingestion. We needed to build a system that could handle three different kinds of data corresponding to events, sessions, and funnels. The one common factor between the three data types was that they would be consumed by Bard users. We expected fewer Bard users than instrumented application users, so each data type would have a low amount of reads. However, the similarities ended there; each data type had other unique properties that made handling them challenging.
+            The second significant challenge that informed our design was data ingestion. We needed to build a system that could handle three different kinds of data corresponding to events, sessions, and funnels. The one common factor between the three data types was that they would be consumed by Bard users. We expected fewer Bard users than instrumented application users, so each data type would have a low amount of reads. However, the similarities ended there; each data type had other unique properties that made handling them challenging. We give an overview of our three data types below.
           </p>
-          <h5><strong>Three Data Types</strong></h5>
           <h6><strong>Event Data</strong></h6>
           <p>
             This data would be coming in from rrweb at a tremendously high rate. When a user is active in a rrweb-monitored browser, it's easy for rrweb to record roughly 50 events per second. This means we have a veritable firehose of data coming into Bard; at 200 simultaneous instrumented application users, Bard would need to handle writing upwards of 10k events per second. This kind of data would also be immutable; we`d never need to change a stored event, just query and return it. We expected these queries to be fairly complex though, as conversion analysis would need to include high volumes of event data. Our ideal data storage solution for event data would meet the following requirements:
@@ -703,7 +682,6 @@
             </ul>
           </p>
           <h5><strong>The Bard Data Pipeline</strong></h5>
-          <h6><strong>Database Goldilocks</strong></h6>
           <p>
             Our most complex design decision was how to handle event data. We needed a data storage solution that supported a high rate of writes (up to 10k per second), and could easily run complex queries over a large amount of data. Traditional relational databases were out of the question for this use case. PostgreSQL could support anywhere from <a href="https://dba.stackexchange.com/questions/270841/how-fast-should-i-expect-postgresql-to-be">a few hundred</a> to <a href="https://www.citusdata.com/blog/2017/09/29/what-performance-can-you-expect-from-postgres/">10k+</a> writes per second, but it required some scaling and configuration to get close to that upper limit. We dismissed traditional relational databases because they couldn`t easily support our throughput needs out of the box. We also quickly decided against a document-oriented NoSQL database like MongoDB. Although MongoDB had a much more attractive baseline write volume of about <a href="https://stackoverflow.com/questions/56495884/how-many-transactions-per-second-can-happen-in-mongodb">15k-20k writes per second</a>, the document data model wasn`t compatible with the kinds of detailed queries we`d want to perform for conversion analysis; MongoDB made storing documents easy, but analyzing the data within them was more difficult. 
           </p>
@@ -715,7 +693,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/no queue.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -725,7 +703,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/system_diagrams/with queue.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -750,11 +728,8 @@
           <p>
             In setting out to accomplish this task, we decided to have the client-side Agent generate and store a unique ID for each session. This ID would be included with every batch of rrweb events sent to the Agent API. The challenge with this approach was persisting a session ID through page reloads and navigation to different pages of the application. Fortunately, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">the `sessionStorage` mechanism of the Web Storage Browser API</a> presents a nearly ready-made solution to this problem. This mechanism provides a key-value store for a browser tab that persists while the user stays at the same origin (i.e. the same combination of scheme, hostname, and port) and keeps the tab open. By choosing to define our sessions as ending when the user either navigates to a different origin, closes the tab, or does not interact with the application for a configurable amount of time, we were able to generate session IDs as follows:
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/Session Id Flow Chart.png">
           </div>
           <p>
             While this process took care of starting and ending sessions on the client-side Agent, it left the server-side components of Bard with no well-defined way of doing the same. Initially, we considered having the Agent communicate the start and end of a session to our backend by means of explicit HTTP requests, but ultimately rejected the idea; due to the inherent unreliability of the network, we would`ve needed to account for the possibility of either of those two requests not being delivered. We found it easier to create a server-side system for deciding session start and end times independent of the client. The Agent API would define the start of a session as the earliest timestamp of any event associated with that session`s ID. A separate backend component, the Session Ender, would decide when a session should end.
@@ -762,11 +737,8 @@
           <p>
             Bard stores active session metadata in a PostgreSQL database and finalized session metadata in a Clickhouse database, so the Session Ender must move expired sessions from one data store to the other. Identifying expired sessions is straightforward, as a session ID is stored in PostgreSQL alongside a maximum idle time and the timestamp of its most recent event; if the session has been idle for longer than its maximum idle time, then it has expired. Moving the expired sessions is more involved; a move consists of transactions on separate data stores, so the atomicity of the move as a whole is not guaranteed. Our implementation does not ensure atomicity but does conduct the move in such a way that there are no adverse consequences if the move isn`t atomic. Expired sessions are moved as follows:
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/Session Ender Flow Chart.png">
           </div>
           <p>
             The only way for a move to not be atomic is for the insertion into Clickhouse to be successful and the deletion from PostgreSQL to be unsuccessful; the only side-effect of this scenario is an extra row in PostgreSQL that will be safely eliminated during a future run of the Session Ender.
@@ -775,11 +747,8 @@
           <p>
             Implementing conversion analysis via user-created funnels was another area with several challenges, the first being the complexity of the funnel itself. As previously mentioned, each Bard funnel has three components: a name, session filters, and an event sequence. The session filter defines what kind of sessions the Bard user is interested in, and the event sequence defines a conversion path by outlining a series of events that occur in a specific order. An example of a Bard funnel`s data structure is below; the session filters dictate that only sessions recorded in the Better Brew app during the week of November 1st, 2022 will be included. Then, the event sequence determines we`re interested in sessions where a user clicked “Add to Cart”, then clicked “Checkout”, then initiated a custom event indicating an order was placed.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/funnel json.png">
           </div>
           <p>
             It's important to note that there`s no limit to the number of events that a Bard user can include in the event sequence of the funnel; they could also apply multiple session filters. The central challenge in implementing funnels was that Bard needed to be flexible enough to handle any permutation of session filters and event types that a Bard user could come up with.
@@ -787,30 +756,21 @@
           <p>
             To handle this problem, Bard creates and executes a sequence of queries based on the content of the funnel it receives. After an initial query that obtains the set of filtered sessions, each event in the event sequence is transformed into a query that uses the results of the previous query as its base. For example, a pseudo-query for the event sequence portion of the above funnel might look like this.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/psuedo sql 1.png">
           </div>
           <p>
             Once we had the code to dynamically create these queries based on user input, we could easily handle any funnel a Bard user could create. If a Bard user wanted to add another click event to the example funnel, the pseudo-query for the funnel would change to the following:
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/psuedo sql 2.png">
           </div>
           <h3 id="section-5-3">SQL Injections</h3>
           <p>
             While dynamically creating queries based on user input was great for flexibility, it came with a new problem of its own; creating SQL queries that incorporate user input could allow a malicious user to perform an SQL injection. This is when a user supplies input to the application that is interpreted as a SQL query the developers didn`t intend. For example, a malicious user could create a funnel resulting in the following pseudo-query, dropping a database called `bard`.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/psuedo sql 3.png">
           </div>
           <p>
             SQL injections are no small problem; <a href="https://owasp.org/www-project-top-ten/">OWASP has identified them as one of the top 5 security risks for web applications.</a> Such a vulnerability could allow bad actors to wreak havoc on our database, performing unauthorized reads, writes, and even deletions. Luckily, Clickhouse came with sanitization features that allowed us to parametrize our queries as we built them, protecting Bard from SQL injections.
@@ -832,7 +792,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/terminal/Docker Compose FINAL.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -842,7 +802,7 @@
           </p>
           <div class="video-container">
             <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
+              <source src="assets/mp4/terminal/AWS Script FINAL.mp4" type="video/mp4" />
               Your browser does not support the HTML5 Video element.
             </video>
           </div>
@@ -858,11 +818,8 @@
           <p>
             <a href="https://aws.amazon.com/ecs/">ECS</a> allows us to deploy containerized applications that leverage Amazon`s serverless cloud and makes it easy to orchestrate containerized applications. For example, a developer can use ECS to ensure there are always a certain number of containers running for a particular app component. The script creates a single ECS cluster and configures it to automatically restart containers if any of them crash, providing high availability to Bard. Then, we use an Amazon service called <a href="https://aws.amazon.com/fargate/">Fargate</a> to create containers for each of Bard`s components. Fargate creates <a href="https://aws.amazon.com/ec2/">EC2</a> servers managed by Amazon. When our containers are created with Fargate, Amazon automatically provisions and maintains the container`s host machines on the cloud; if a Bard container needs more CPUs or more memory, Fargate can scale to provide that automatically. Without Fargate, Bard users would need to manage their own EC2 instances for Bard`s containers, manually checking in on their health and scaling them up or down as required.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/AWS System.png">
           </div>
           <h3 id="section-6-2">Instrumenting Your Application</h3>
           <p>
@@ -873,20 +830,14 @@
               <li>`MAX_IDLE_TIME`: The amount (in milliseconds) of inactivity after which you want Bard to end a session on the backend.</li>
             </ul>
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/start recording.png">
           </div>
           <p>
             To generate a Bard custom event, use the static `handleCustomEvent` method exposed by the `Agent` class in your application code. When the conditions that define your custom event arise, simply call `Agent.handleCustomEvent` with a string designating the custom event type. In the below example, the Agent will send a “user left tab” custom event to the Agent API when the document`s visibility state is changed to “hidden”.
           </p>
-          <div class="video-container">
-            <video autoplay loop muted playsinline class="video">
-              <source src="assets/mp4/user_interface/Session-Replay-v2.mp4" type="video/mp4" />
-              Your browser does not support the HTML5 Video element.
-            </video>
+          <div class="image-container">
+            <img src="assets/png/custom event code.png">
           </div>
           <!-- Section 7 -->
           <h2 id="section-7" class="h2">7. Future Plans</h2>
