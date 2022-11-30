@@ -27,6 +27,15 @@ a:hover {
   text-decoration: none;
 }
 
+a.card-link {
+  color: #34384c;
+  text-decoration: none;
+}
+
+a.card-link:hover {
+  color: var(--bard-blue);
+}
+
 h1,
 h2,
 h3,
@@ -915,7 +924,7 @@ section {
 }
 #case-study-content > div {
   margin-left: auto;
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
 }
 
 #case-study-content .prose {
