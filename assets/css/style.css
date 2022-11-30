@@ -12,16 +12,16 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
-
-a {
-  color: var(--bard_blue);
-  text-decoration: none;
-}
-
 :root {
   --toc-width: 400px;
   --bard-blue: #7398ff;
 }
+
+a {
+  color: var(--bard-blue);
+  text-decoration: none;
+}
+
 a:hover {
   color: #34384c;
   text-decoration: none;
@@ -46,7 +46,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: var(--bard_blue);
+  background: var(--bard-blue);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -60,7 +60,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: var(--bard_blue);
+  background: var(--bard-blue);
   color: #fff;
 }
 
@@ -165,7 +165,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  background: var(--bard_blue);
+  background: var(--bard-blue);
 }
 
 .navbar .dropdown ul {
@@ -365,7 +365,7 @@ h6 {
   overflow: hidden;
   position: relative;
   /* background: linear-gradient(0deg, rgb(42, 44, 57) 0%, rgb(51, 54, 74) 100%); */
-  background: linear-gradient(0deg, var(--bard_blue) 0%, #34384c 100%);
+  background: linear-gradient(0deg, var(--bard-blue) 0%, #34384c 100%);
   padding: 0;
 }
 
@@ -574,7 +574,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: var(--bard_blue);
+  background: var(--bard-blue);
   margin: 4px 10px;
 }
 
@@ -633,7 +633,7 @@ section {
 }
 
 .about .title a:hover {
-  color: var(--bard_blue);
+  color: var(--bard-blue);
 }
 
 .about .description {
@@ -682,7 +682,7 @@ section {
   border-radius: 50px;
   width: 36px;
   height: 36px;
-  background: var(--bard_blue);
+  background: var(--bard-blue);
   transition: ease-in-out 0.3s;
   color: #fff;
   display: inline-flex;
@@ -764,7 +764,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: var(--bard_blue);
+  background: var(--bard-blue);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -829,7 +829,7 @@ section {
 }
 
 #toc .selected a {
-  color: var(--bard_blue);
+  color: var(--bard-blue);
   text-decoration: none;
 }
 
@@ -871,7 +871,7 @@ section {
 }
 
 #toc .selected .bullet {
-  background-color: var(--bard_blue);
+  background-color: var(--bard-blue);
 }
 
 #toc .selected .bullet div {
