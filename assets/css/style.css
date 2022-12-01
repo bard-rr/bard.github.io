@@ -1024,3 +1024,28 @@ section {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.large-screen {
+  display: block;
+}
+
+.navbar-mobile .large-screen {
+  display: none;
+}
+
+.small-screen {
+  display: none;
+}
+
+.navbar-mobile .small-screen {
+  display: block;
+}
+
+.navbar-mobile .subitem {
+  display: none;
+  margin-left: 1.625rem;
+}
+
+.navbar-mobile.subitem.show {
+  display: block;
+}
