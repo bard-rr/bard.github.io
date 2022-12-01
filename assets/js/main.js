@@ -305,10 +305,6 @@
   };
 
   const handleTocVisibility = () => {
-    console.log("case study top", caseStudy.offsetTop);
-    console.log("window scroll", window.scrollY);
-    console.log("window inner height", window.innerHeight);
-    console.log("offset height", caseStudy.offsetHeight);
     const tocIsVisible = () => {
       const caseStudyTopIsVisible = window.scrollY >= caseStudy.offsetTop;
       const caseStudyBottomIsVisible =
@@ -317,7 +313,6 @@
 
       return caseStudyTopIsVisible && !caseStudyBottomIsVisible;
     };
-    console.log("is toc visible", tocIsVisible());
     if (tocIsVisible()) {
       toc.classList.add("show");
     } else {
