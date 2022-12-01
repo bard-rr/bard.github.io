@@ -134,7 +134,7 @@
   );
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with ofset on links with a class name .scrollto
    */
   on(
     "click",
@@ -320,15 +320,36 @@
     }
   };
 
+  /*
+  TODO: 
+  fix the animation when you click something on the toc. I don't like how it cycles
+  through everything. It looks like its because the browser scrolls for you automatically
+  whenever you click something in the toc, so its constantly calling the scroll event handler.
+  I tried something harebrained that didn't end up working
+    clicking an anchor tag to a local spot on the page throws a hashchange event.
+    tried removing the scroll event listener, doing the toc selection change, then adding the scroll event listener back on.
+
+  That didn't work, and I didn't really want to find out why. Tomorrow, just look at what 
+  Fjord did, their TOC works exactly the way I want mine to work: scrolls through okay, and 
+  instantly switches to the right point when you click on it.
+
+  MOBILE FEEDBACK
+  terminal videos don't load in mobile... should look at that later
+  shrink the dimensions of the hero part: I want the header, blurb and wave visible all at once.
+
+  */
+
   const handleTocSelection = () => {
     const clearSelectedToc = () => {
       const selectedTocItems = document.querySelectorAll("#toc .selected");
       const subItems = document.querySelectorAll(`li.subitem.show`);
 
+      //hide any open subitems
       subItems.forEach((subItem) => {
         subItem.classList.remove("show");
       });
 
+      //remove the selected items
       selectedTocItems.forEach((selectedTocItem) => {
         selectedTocItem.classList.remove("selected");
       });
@@ -348,13 +369,17 @@
       tocItem.classList.add("selected");
     };
 
+    //do nothing if we don't want to show the toc
     if (!toc.classList.contains("show")) return;
 
+    //for each link in the toc
     for (let i = tocLinksCount - 1; i >= 0; i--) {
       const link = tocLinks[i];
+      //link.hash is the place the anchor links to.
       if (!link.hash) continue;
       const target = document.querySelector(link.hash);
 
+      //if the target exists and its reasonable far away
       if (!!target && target.offsetTop <= window.scrollY + 16 * 2) {
         clearSelectedToc();
         selectTocItem(link, target);
