@@ -385,7 +385,7 @@ h6 {
   flex-direction: column;
   text-align: center;
   position: relative;
-  height: 70vh;
+  height: 80vh;
   padding-top: 60px;
 }
 
@@ -460,7 +460,7 @@ h6 {
   /* I think this looks better when its shorter on small screens: 
   You can see the wave immediately on mobile. */
   #hero .carousel-container {
-    height: 75vh;
+    height: 77vh;
   }
 
   #hero h2 {
@@ -701,32 +701,6 @@ section {
   justify-content: center;
 }
 
-.github {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.github a {
-  transition: color 0.3s;
-  margin: 0 3px;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-  background: var(--bard-blue);
-  transition: ease-in-out 0.3s;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .team .member .social a:hover {
   background: #34384c;
 }
@@ -766,8 +740,14 @@ section {
   bottom: 15px;
 }
 
-.team-prose {
+.emphasize-line {
   padding-bottom: 24px;
+  color: #4a5568;
+  font-size: 24px;
+  text-align: center;
+}
+
+.emphasize-line-no-pad {
   color: #4a5568;
   font-size: 24px;
   text-align: center;
@@ -997,7 +977,7 @@ section {
   color: #4a5568; /* sophie changes */
 }
 
-.prose figure figcaption {
+figcaption {
   color: #4a5568;
   margin-top: 8px;
   text-align: center;
@@ -1076,4 +1056,19 @@ section {
 
 .navbar-mobile.subitem.show {
   display: block;
+}
+
+.title-image {
+  padding-left: 150px;
+}
+
+.intro {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.intro-video {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }

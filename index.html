@@ -9,7 +9,6 @@
   [x] make the links stand out more than they do
   [x] fix the 'what we offer' section
   [x] fix the team section
-  [] populate the 'references' section
   [x] better mobile support
   [x] get rid of the fade in classes on all write up paragraphs besides to top two
   [x] can I make the paragraphs of the case study fade in like the rest of the content?
@@ -74,16 +73,15 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li class="large-screen"><a class="nav-link scrollto" href="#case-study">Case Study</a></li>
           <li class="small-screen dropdown"><a class="#"><span>Case Study</span><i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a class="nav-link scrollto" href="#section-1">1. Introduction</a></li>
-            <li><a class="nav-link scrollto" href="#section-2">2. What is Bard?</a></li>
-            <li><a class="nav-link scrollto" href="#section-3">3. Architecture</a></li>
-            <li><a class="nav-link scrollto" href="#section-4">4. Design Decisions</a></li>
-            <li><a class="nav-link scrollto" href="#section-5">5. Implementation Challenges</a></li>
-            <li><a class="nav-link scrollto" href="#section-6">6. Installation & Deployment</a></li>
-            <li><a class="nav-link scrollto" href="#section-7">7. Future Plans</a></li>
-            <li><a class="nav-link scrollto" href="#section-8">8. References</a></li>
-          </ul>
+            <ul>
+              <li><a class="nav-link scrollto" href="#section-1">1. Introduction</a></li>
+              <li><a class="nav-link scrollto" href="#section-2">2. What is Bard?</a></li>
+              <li><a class="nav-link scrollto" href="#section-3">3. Architecture</a></li>
+              <li><a class="nav-link scrollto" href="#section-4">4. Design Decisions</a></li>
+              <li><a class="nav-link scrollto" href="#section-5">5. Implementation Challenges</a></li>
+              <li><a class="nav-link scrollto" href="#section-6">6. Installation & Deployment</a></li>
+              <li><a class="nav-link scrollto" href="#section-7">7. Future Plans</a></li>
+            </ul>
           </li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a href="https://github.com/bard-rr" target="_blank">Github</a></li>
@@ -102,7 +100,9 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Bard</span></h2>
-          <p class="animate__animated fanimate__adeInUp">Bard is an open source application for recording, replaying and analyzing how users interact with your website.</p>
+          <div>
+            <p class="animate__animated fanimate__adeInUp emphasize-line-no-pad">Bard is an open source application for recording, replaying and analyzing how users interact with your website.</p>
+          </div>
           <a href="#case-study" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read Our Case Study</a>
         </div>
       </div>
@@ -128,10 +128,26 @@
 
   <main id="main">
 
-    <section id="todo" class="todo">
-      <div class="container">
-        <h1>TODO</h1>
-        <p>Would be nice to put some kind of gif(s) or image(s) here showing what Bard does</p>
+    <section id="todo" class="intro">
+      <!-- <div class="container">
+        <div class="image-container title-image" data-aos="fade-up" >
+          <figure>
+            <img src="assets/png/bard components.png">
+            <figcaption style="padding-right: 150px; padding-bottom: 20px;">
+              Bard brings you all of these technologies in an easy to deploy package.
+            </figcaption>
+          </figure>
+        </div>
+      </div> -->
+      <div class="video-container intro-video" data-aos="fade-up">
+        <div>
+          <p class="emphasize-line" data-aos="fade-up">Bard allows you to quickly find out why users aren't interacting with your application the way you'd expect.</p>
+        </div>
+        <video autoplay loop muted playsinline class="video">
+          <source src="assets/mp4/user_interface/View Funnel.mp4" type="video/mp4" />
+          Your browser does not support the HTML5 Video element.
+        </video>
+        <!-- <figcaption>Bard allows you to quickly find out why users aren't interacting with your application the way you'd expect.</figcaption> -->
       </div>
     </section>
 
@@ -400,16 +416,6 @@
                 <div>
                   <div class="bullet"><div></div></div>
                   <p>7. Future Plans</p>
-                </div>
-              </a>
-            </li>
-
-            <!-- Section 8 -->
-            <li data-section="section-8">
-              <a href="#section-8">
-                <div>
-                  <div class="bullet"><div></div></div>
-                  <p>8. References</p>
                 </div>
               </a>
             </li>
@@ -873,10 +879,6 @@
               <li>Use a cache to maintain static assets, like images and stylesheets, during session replay.</li>
             </ul>
           </p>
-
-          <!-- Section 8 -->
-          <!-- TODO: need to fill this out -->
-          <h2 id="section-8" class="h2">8. References</h2>
         </div>
       </div>
     </div>
@@ -891,7 +893,7 @@
           <p>Our Hardworking Team</p>
         </div>
         <div>
-          <p class="team-prose" data-aos="fade-up">We're a team of fully remote software engineers seeking new opportunities! Feel free to reach out to us if you liked what you saw and want to learn more.</p>
+          <p class="emphasize-line" data-aos="fade-up">We're a team of fully remote software engineers seeking new opportunities! Feel free to reach out to us if you liked what you saw and want to learn more.</p>
         </div>
 
         <div class="row">
@@ -901,10 +903,7 @@
               <div class="member-img">
                 <img src="assets/img/team/Aaron-Hull.png" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/aaron-hull-austin/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -919,10 +918,7 @@
               <div class="member-img">
                 <img src="assets/img/team/Gene-O'Fallon.png" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/eugene-ofallon/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -937,10 +933,7 @@
               <div class="member-img">
                 <img src="assets/img/team/Marcin-Kostecki.png" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/marcinkostecki/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -955,10 +948,7 @@
               <div class="member-img">
                 <img src="assets/img/team/Nino-Lambert.png" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/nino-lambert-933b62130/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
