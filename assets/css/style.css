@@ -385,7 +385,7 @@ h6 {
   flex-direction: column;
   text-align: center;
   position: relative;
-  height: 70vh;
+  height: 80vh;
   padding-top: 60px;
 }
 
@@ -740,8 +740,14 @@ section {
   bottom: 15px;
 }
 
-.team-prose {
+.emphasize-line {
   padding-bottom: 24px;
+  color: #4a5568;
+  font-size: 24px;
+  text-align: center;
+}
+
+.emphasize-line-no-pad {
   color: #4a5568;
   font-size: 24px;
   text-align: center;
@@ -971,7 +977,7 @@ section {
   color: #4a5568; /* sophie changes */
 }
 
-.prose figure figcaption {
+figcaption {
   color: #4a5568;
   margin-top: 8px;
   text-align: center;
@@ -1050,4 +1056,19 @@ section {
 
 .navbar-mobile.subitem.show {
   display: block;
+}
+
+.title-image {
+  padding-left: 150px;
+}
+
+.intro {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.intro-video {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
