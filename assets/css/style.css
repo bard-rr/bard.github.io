@@ -943,7 +943,7 @@ section {
 }
 
 #case-study-content .prose {
-  max-width: 80ch;
+  max-width: 100ch;
 }
 
 #case-study-content .prose h1::before,
