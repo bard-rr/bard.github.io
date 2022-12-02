@@ -274,7 +274,7 @@
   const tocLinksCount = tocLinks.length;
 
   // Handlers
-  const handleScroll = () => {
+  const handleScroll = (event) => {
     handleTocVisibility();
     handleTocSelection();
   };
@@ -321,17 +321,7 @@
   };
 
   /*
-  TODO: 
-  fix the animation when you click something on the toc. I don't like how it cycles
-  through everything. It looks like its because the browser scrolls for you automatically
-  whenever you click something in the toc, so its constantly calling the scroll event handler.
-  I tried something harebrained that didn't end up working
-    clicking an anchor tag to a local spot on the page throws a hashchange event.
-    tried removing the scroll event listener, doing the toc selection change, then adding the scroll event listener back on.
-
-  That didn't work, and I didn't really want to find out why. Tomorrow, just look at what 
-  Fjord did, their TOC works exactly the way I want mine to work: scrolls through okay, and 
-  instantly switches to the right point when you click on it.
+  TODO:
 
   MOBILE FEEDBACK
   terminal videos don't load in mobile... should look at that later
@@ -393,9 +383,9 @@
   const throttle = (callback, wait) => {
     let prevent = false;
 
-    return function () {
+    return function (event) {
       if (!prevent) {
-        callback();
+        callback(event);
         prevent = true;
         setTimeout(function () {
           prevent = false;
