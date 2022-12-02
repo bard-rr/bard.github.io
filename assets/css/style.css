@@ -457,8 +457,10 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  /* I think this looks better when its shorter on small screens: 
+  You can see the wave immediately on mobile. */
   #hero .carousel-container {
-    height: 90vh;
+    height: 80vh;
   }
 
   #hero h2 {
