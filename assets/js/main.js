@@ -320,15 +320,6 @@
     }
   };
 
-  /*
-  TODO:
-
-  MOBILE FEEDBACK
-  terminal videos don't load in mobile... should look at that later
-  shrink the dimensions of the hero part: I want the header, blurb and wave visible all at once.
-
-  */
-
   const handleTocSelection = () => {
     const clearSelectedToc = () => {
       const selectedTocItems = document.querySelectorAll("#toc .selected");

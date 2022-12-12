@@ -373,7 +373,6 @@ h6 {
   width: 100%;
   overflow: hidden;
   position: relative;
-  /* background: linear-gradient(0deg, rgb(42, 44, 57) 0%, rgb(51, 54, 74) 100%); */
   background: linear-gradient(0deg, var(--bard-blue) 0%, #34384c 100%);
   padding: 0;
 }
@@ -457,7 +456,7 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  /* I think this looks better when its shorter on small screens: 
+  /* This looks better when its shorter on small screens: 
   You can see the wave immediately on mobile. */
   #hero .carousel-container {
     height: 77vh;
@@ -819,7 +818,6 @@ section {
   background-color: var(--white);
   border-right: 1px solid var(--gray-200);
   bottom: 0;
-  /* left: calc(var(--toc-width) * -1); */
   opacity: 0;
   overflow-y: auto;
   padding: 2rem 1rem;
@@ -832,14 +830,12 @@ section {
 }
 
 #toc.show {
-  /* left: 0; */
   opacity: 1;
   visibility: visible;
   margin-left: auto;
 }
 
 #toc li {
-  /* margin-bottom: 1.5rem; */
   line-height: 1.25rem;
 }
 
@@ -955,7 +951,6 @@ section {
   margin-top: -6rem;
   height: 6rem;
   visibility: hidden;
-  /* background-color: rgba(0, 0, 0, 0.1); */
   pointer-events: none;
 }
 
@@ -963,7 +958,7 @@ section {
 .prose h2,
 .prose h3,
 .prose h4 {
-  color: #334252; /* sophie changes */
+  color: #334252;
   margin-top: 3rem;
 }
 
@@ -974,7 +969,7 @@ section {
 }
 
 .prose p {
-  color: #4a5568; /* sophie changes */
+  color: #4a5568;
 }
 
 figcaption {
@@ -997,10 +992,6 @@ figcaption {
 .prose em {
   font-style: italic;
 }
-
-/* #case-study img {
-  width: 700px;
-} */
 
 .prose code {
   background-color: var(--gray-100);
